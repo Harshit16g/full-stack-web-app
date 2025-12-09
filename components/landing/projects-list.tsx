@@ -1,62 +1,67 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Image from "next/image"
 import { createClient } from "@/lib/supabase/client"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
-type Project = {
-  id: string
-  name: string
-  description: string
-  image_url: string
-}
+import { Project } from "@/types/db"
+
+import { PaperContainer } from "@/components/ui/paper-container"
+
+import { useProjects } from "@/hooks/useProjects"
+import { useToast } from "@/hooks/use-toast"
 
 export function ProjectsList() {
-  const [projects, setProjects] = useState<Project[]>([])
-  const [loading, setLoading] = useState(true)
+  const { projects, loading, error } = useProjects()
+  const { toast } = useToast()
 
   useEffect(() => {
-    const fetchProjects = async () => {
-      const supabase = createClient()
-      const { data, error } = await supabase.from("projects").select("*").order("created_at", { ascending: false })
-
-      if (error) {
-        console.error("Error fetching projects:", error)
-      } else {
-        setProjects(data || [])
-      }
-      setLoading(false)
+    if (error) {
+      toast({
+        title: "Error loading projects",
+        description: error,
+        variant: "destructive",
+      })
     }
-
-    fetchProjects()
-  }, [])
+  }, [error, toast])
 
   if (loading) {
-    return <div className="text-center">Loading projects...</div>
+    return <div className="text-center font-hand text-xl">Loading projects...</div>
+  }
+
+  if (error) {
+    return <div className="text-center text-red-500 font-hand">Error loading projects</div>
   }
 
   return (
-    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {projects.map((project) => (
-        <Card key={project.id} className="overflow-hidden">
-          {project.image_url && (
-            <img
-              src={project.image_url || "/placeholder.svg"}
-              alt={project.name}
-              className="h-48 w-full object-cover"
-            />
-          )}
-          <CardHeader>
-            <CardTitle className="text-xl">{project.name}</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <CardDescription className="line-clamp-2">{project.description}</CardDescription>
-            <Button variant="outline" className="w-full bg-transparent">
-              Read More
-            </Button>
-          </CardContent>
-        </Card>
+    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {projects.map((project, index) => (
+        <div
+          key={project.id}
+          className="h-full animate-fade-in-up"
+          style={{ animationDelay: `${index * 0.1}s`, opacity: 0 }}
+        >
+          <PaperContainer
+            variant="polaroid"
+            rotate={index % 2 === 0 ? "left" : "right"}
+            className="h-full flex flex-col hover:z-20 transition-all duration-300 hover-tilt group"
+          >
+            {project.image_url && (
+              <div className="aspect-video w-full overflow-hidden bg-gray-100 mb-4 border border-gray-200">
+                <Image src={project.image_url || "/placeholder.svg"} alt={project.name} width={400} height={300} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            )}
+            <div className="flex-1 flex flex-col">
+              <h3 className="text-xl font-bold font-hand mb-2 text-primary">{project.name}</h3>
+              <p className="text-muted-foreground text-sm flex-1 mb-4 line-clamp-3">{project.description}</p>
+              <Button variant="ghost" className="w-full tape-strip text-primary-foreground font-hand text-lg h-10 mt-auto hover:bg-secondary/90 hover:scale-[1.02] transition-transform shadow-sm" aria-label={`Read more about ${project.name}`}>
+                Read More
+              </Button>
+            </div>
+          </PaperContainer>
+        </div>
       ))}
     </div>
   )

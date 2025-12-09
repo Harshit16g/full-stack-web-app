@@ -208,6 +208,9 @@ Visit: http://localhost:3000
 ### Error: "Cannot read properties of null"
 **Solution**: Verify environment variables in `.env` are correct
 
+### Error: "Could not find the '...' column in the schema cache"
+**Solution**: Run `NOTIFY pgrst, 'reload schema';` in the Supabase SQL Editor.
+
 ---
 
 ## 📊 Database Schema Diagram
@@ -323,6 +326,14 @@ CREATE TABLE contact_requests (
   city TEXT,
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
+
+-- Add message column if it doesn't exist
+DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns WHERE table_name = 'contact_requests' AND column_name = 'message') THEN
+        ALTER TABLE contact_requests ADD COLUMN message TEXT;
+    END IF;
+END $$;
 
 CREATE TABLE newsletter_subscribers (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),

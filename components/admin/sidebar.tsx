@@ -40,7 +40,7 @@ export function AdminSidebar() {
     <aside className="flex w-64 flex-col border-r bg-muted/30">
       <div className="p-6">
         <Link href="/" className="text-2xl font-bold text-primary">
-          Portfolio
+          Prismy
         </Link>
       </div>
       <nav className="flex-1 space-y-2 px-3 py-6">

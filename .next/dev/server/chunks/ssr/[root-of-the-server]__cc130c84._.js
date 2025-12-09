@@ -92,7 +92,7 @@ async function addClient(data) {
             designation: validated.designation,
             image_url: validated.image_url
         }
-    ]).select();
+    ]).select("*");
     if (error) {
         throw new Error(error.message);
     }
@@ -120,7 +120,7 @@ async function updateClient(id, data) {
         description: validated.description,
         designation: validated.designation,
         image_url: validated.image_url
-    }).eq("id", validatedId).select();
+    }).eq("id", validatedId).select("*");
     if (error) {
         throw new Error(error.message);
     }

@@ -90,7 +90,8 @@ const contactSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modul
     full_name: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v4$2f$classic$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].string().min(2, "Name must be at least 2 characters").max(100),
     email: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v4$2f$classic$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].string().email("Invalid email address"),
     mobile: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v4$2f$classic$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].string().regex(/^\+?[\d\s\-()]+$/, "Invalid phone number").min(10).max(20),
-    city: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v4$2f$classic$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].string().min(2, "City must be at least 2 characters").max(100)
+    city: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v4$2f$classic$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].string().min(2, "City must be at least 2 characters").max(100),
+    message: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v4$2f$classic$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["z"].string().optional()
 });
 async function submitContact(data) {
     // Validate input
@@ -101,7 +102,8 @@ async function submitContact(data) {
             full_name: validated.full_name,
             email: validated.email,
             mobile: validated.mobile,
-            city: validated.city
+            city: validated.city,
+            user_message: validated.message
         }
     ]);
     if (error) {

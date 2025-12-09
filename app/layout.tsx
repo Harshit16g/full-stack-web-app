@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Geist, Geist_Mono, Patrick_Hand } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Toaster } from "@/components/ui/toaster"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -8,14 +8,15 @@ import "./globals.css"
 
 const geist = Geist({ subsets: ["latin"] })
 const geistMono = Geist_Mono({ subsets: ["latin"] })
+const patrickHand = Patrick_Hand({ weight: "400", subsets: ["latin"], variable: "--font-hand" })
 
 export const metadata: Metadata = {
-  title: "Portfolio - Transform Your Vision Into Reality",
+  title: "Prismy - Transform Your Vision Into Reality",
   description:
     "We create exceptional digital experiences that drive growth and engage your audience. Explore our projects, clients, and services.",
   keywords: ["portfolio", "projects", "web development", "digital solutions"],
   openGraph: {
-    title: "Portfolio - Transform Your Vision Into Reality",
+    title: "Prismy - Transform Your Vision Into Reality",
     description: "We create exceptional digital experiences that drive growth and engage your audience.",
     type: "website",
   },
@@ -32,7 +33,7 @@ export const viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${geist.className} font-sans antialiased`}>
+      <body className={`${geist.className} ${patrickHand.variable} font-sans antialiased`}>
         <ThemeProvider>
           {children}
           <Toaster />

@@ -1,43 +1,33 @@
 "use client"
 
-import { useEffect, useState } from "react"
-import { createClient } from "@/lib/supabase/client"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 
-type Contact = {
-  id: string
-  full_name: string
-  email: string
-  mobile: string
-  city: string
-  created_at: string
-}
+import { Contact } from "@/types/db"
+
+import { useContacts } from "@/hooks/useContacts"
+import { useToast } from "@/hooks/use-toast"
+import { useEffect } from "react"
 
 export function ContactsList() {
-  const [contacts, setContacts] = useState<Contact[]>([])
-  const [loading, setLoading] = useState(true)
+  const { contacts, loading, error } = useContacts()
+  const { toast } = useToast()
 
   useEffect(() => {
-    const fetchContacts = async () => {
-      const supabase = createClient()
-      const { data, error } = await supabase
-        .from("contact_requests")
-        .select("*")
-        .order("created_at", { ascending: false })
-
-      if (error) {
-        console.error("Error fetching contacts:", error)
-      } else {
-        setContacts(data || [])
-      }
-      setLoading(false)
+    if (error) {
+      toast({
+        title: "Error fetching contacts",
+        description: error,
+        variant: "destructive",
+      })
     }
-
-    fetchContacts()
-  }, [])
+  }, [error, toast])
 
   if (loading) {
-    return <div className="text-center">Loading contacts...</div>
+    return <div>Loading contacts...</div>
+  }
+
+  if (error) {
+    return <div className="text-red-500">Error: {error}</div>
   }
 
   return (
@@ -49,6 +39,7 @@ export function ContactsList() {
             <TableHead>Email</TableHead>
             <TableHead>Mobile</TableHead>
             <TableHead>City</TableHead>
+            <TableHead>Message</TableHead>
             <TableHead>Date</TableHead>
           </TableRow>
         </TableHeader>
@@ -59,6 +50,7 @@ export function ContactsList() {
               <TableCell>{contact.email}</TableCell>
               <TableCell>{contact.mobile}</TableCell>
               <TableCell>{contact.city}</TableCell>
+              <TableCell className="max-w-xs truncate" title={contact.message || ""}>{contact.message || "-"}</TableCell>
               <TableCell>{new Date(contact.created_at).toLocaleDateString()}</TableCell>
             </TableRow>
           ))}

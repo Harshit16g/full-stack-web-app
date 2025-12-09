@@ -16,6 +16,7 @@ const contactSchema = z.object({
   email: z.string().email("Invalid email address"),
   mobile: z.string().min(10, "Phone must be at least 10 digits"),
   city: z.string().min(2, "City must be at least 2 characters"),
+  message: z.string().optional(),
 })
 
 type ContactFormData = z.infer<typeof contactSchema>
@@ -34,6 +35,7 @@ export function ContactForm({ hero }: ContactFormProps) {
       email: "",
       mobile: "",
       city: "",
+      message: "",
     },
   })
 
@@ -95,7 +97,7 @@ export function ContactForm({ hero }: ContactFormProps) {
                 <FormItem>
                   <FormLabel>Mobile Number</FormLabel>
                   <FormControl>
-                    <Input placeholder="+1 (555) 000-0000" {...field} />
+                    <Input placeholder="+91 8770963987" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -114,7 +116,24 @@ export function ContactForm({ hero }: ContactFormProps) {
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full" disabled={loading}>
+            <FormField
+              control={form.control}
+              name="message"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Your Message</FormLabel>
+                  <FormControl>
+                    <textarea
+                      className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                      placeholder="Tell us about your project..."
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <Button type="submit" className="w-full tape-strip text-lg font-hand h-12 hover:scale-[1.02] active:scale-[0.98] transition-transform" disabled={loading}>
               {loading ? "Sending..." : "Send Message"}
             </Button>
           </form>
