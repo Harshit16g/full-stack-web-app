@@ -1,72 +1,146 @@
-# Full-Stack Portfolio Application
+# 🌟 Full-Stack Portfolio Application
 
-A modern, production-ready full-stack web application built with Next.js 14, Supabase, and ShadCN UI. Features a beautiful landing page, complete admin panel with CRUD operations, dual theme system, and image upload with cropping.
+<div align="center">
+
+![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)
+![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3FCF8E?style=for-the-badge&logo=supabase)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38B2AC?style=for-the-badge&logo=tailwind-css)
+
+**A modern, production-ready full-stack web application with a beautiful landing page, comprehensive admin dashboard, and real-time analytics.**
+
+[Live Demo](#) • [Documentation](#-documentation) • [Setup Guide](#-quick-start)
+
+</div>
+
+---
+
+## 📸 Screenshots
+
+### Landing Page
+
+<table>
+<tr>
+<td align="center" width="50%">
+<img src="showcase_assets/01-hero-section.png" alt="Hero Section" />
+<br /><strong>Hero Section</strong><br />
+Animated doodles, gradient blobs, and consultation form
+</td>
+<td align="center" width="50%">
+<img src="showcase_assets/02-projects-section.png" alt="Projects Section" />
+<br /><strong>Projects Showcase</strong><br />
+Dynamic project cards with hover animations
+</td>
+</tr>
+<tr>
+<td align="center">
+<img src="showcase_assets/03-clients-section.png" alt="Clients Section" />
+<br /><strong>Client Testimonials</strong><br />
+Paper-style cards with floating animations
+</td>
+<td align="center">
+<img src="showcase_assets/04-contact-section.png" alt="Contact Section" />
+<br /><strong>Contact Form</strong><br />
+Dual forms with toast notifications
+</td>
+</tr>
+</table>
+
+### Admin Dashboard
+
+<table>
+<tr>
+<td align="center" width="50%">
+<img src="showcase_assets/05-admin-dashboard.png" alt="Admin Dashboard" />
+<br /><strong>Analytics Dashboard</strong><br />
+Engagement charts, city distribution, trends
+</td>
+<td align="center" width="50%">
+<img src="showcase_assets/06-admin-projects.png" alt="Projects Management" />
+<br /><strong>Projects Management</strong><br />
+Full CRUD with image upload & cropping
+</td>
+</tr>
+<tr>
+<td align="center">
+<img src="showcase_assets/07-admin-clients.png" alt="Clients Management" />
+<br /><strong>Clients Management</strong><br />
+Testimonial management with avatars
+</td>
+<td align="center">
+<img src="showcase_assets/08-admin-contacts.png" alt="Contact Requests" />
+<br /><strong>Contact Requests</strong><br />
+View all inquiries with full details
+</td>
+</tr>
+</table>
+
+---
 
 ## ✨ Features
 
-### Landing Page
-- 🎨 Hero section with consultation form
-- 💡 Why Choose Us section
-- 📖 About Us section
-- 🎯 Dynamic Projects showcase
-- 👥 Client testimonials
-- 📧 Contact form
-- 📬 Newsletter subscription
-- 🌓 **Dual theme system** (Blue/White ↔ Orange/Dark)
+### 🎨 Landing Page
+- **Hero Section** with animated gradient blobs and floating doodles
+- **Projects Showcase** with 3D hover tilt and staggered animations
+- **Client Testimonials** with paper-style cards and parallax effects
+- **Contact Form** with validation and toast notifications
+- **Newsletter Subscription** with email capture
+- **Dual Theme System** – Blue/White ↔ Orange/Dark
 
-### Admin Panel
-- 🔐 Secure authentication with Supabase Auth
-- 📊 Dashboard with overview cards
-- ✏️ **Full CRUD operations** for:
-  - Projects (Create, Read, Update, Delete)
-  - Clients (Create, Read, Update, Delete)
-  - Contact requests (Read only)
-  - Newsletter subscribers (Read only)
-- 🖼️ Image upload with cropping (450×350 for projects, 1:1 for clients)
-- ✅ Server-side validation with Zod
-- 🎨 Beautiful UI with ShadCN components
+### 📊 Admin Dashboard
+- **Real-time Analytics** – Engagement trends, city distribution, conversion rates
+- **Full CRUD Operations** for Projects and Clients
+- **Image Upload** with cropping (450×350 for projects, 1:1 for clients)
+- **Contact Management** – View all inquiries
+- **Subscriber Management** – Track newsletter signups
+- **Protected Routes** with Supabase Auth
+
+### 🎭 Creative Design
+- **Digital Sketchbook** aesthetic with paper textures
+- **Smooth Animations** – Float, wiggle, fade-in, draw effects
+- **Micro-interactions** – Hover states, focus rings, tilt effects
+- **Accessibility** – Respects `prefers-reduced-motion`
+
+---
 
 ## 🛠️ Tech Stack
 
-### Frontend
-- **Framework**: Next.js 14 (App Router)
-- **UI Library**: React 19
-- **Styling**: Tailwind CSS v4
-- **Components**: ShadCN UI
-- **Forms**: React Hook Form + Zod validation
-- **Language**: TypeScript
-- **Analytics**: Vercel Analytics
+| Category | Technologies |
+|----------|--------------|
+| **Frontend** | Next.js 14, React 19, TypeScript |
+| **Styling** | Tailwind CSS v4, ShadCN UI |
+| **Backend** | Supabase (PostgreSQL, Auth, Storage) |
+| **Charts** | Recharts |
+| **Forms** | React Hook Form + Zod validation |
+| **Analytics** | Vercel Analytics |
 
-### Backend
-- **Database**: Supabase PostgreSQL
-- **Storage**: Supabase Storage
-- **Authentication**: Supabase Auth
-- **API**: Next.js Server Actions
+---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 20.9.0 or higher
+- Node.js 20.9.0+
 - npm or pnpm
 - Supabase account
 
 ### 1. Clone & Install
 
-bash
+```bash
 git clone <your-repo-url>
 cd full-stack-web-app
 npm install
-
+```
 
 ### 2. Environment Setup
 
 Create a `.env` file:
 
-env
+```env
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
 SUPABASE_SECRET_KEY=your_secret_key
-
+```
 
 ### 3. Database Setup
 
@@ -81,215 +155,129 @@ See [SETUP_DATABASE.md](./SETUP_DATABASE.md) for complete instructions.
 
 ### 4. Run Development Server
 
-bash
-./dev.sh
-# or
+```bash
 npm run dev
-
+```
 
 Visit: **http://localhost:3000**
 
+---
+
 ## 📁 Project Structure
 
-
+```
 full-stack-web-app/
 ├── app/
-│   ├── actions/          # Server actions (CRUD operations)
+│   ├── actions/          # Server actions (CRUD)
 │   ├── admin/            # Admin panel pages
-│   ├── auth/             # Authentication pages
-│   ├── globals.css       # Global styles + themes
-│   ├── layout.tsx        # Root layout with ThemeProvider
+│   ├── auth/             # Authentication
 │   └── page.tsx          # Landing page
 ├── components/
-│   ├── admin/            # Admin-specific components
-│   ├── landing/          # Landing page sections
-│   ├── ui/               # ShadCN UI components
-│   ├── image-uploader.tsx
-│   ├── theme-provider.tsx
-│   └── theme-toggle.tsx
-├── lib/
-│   └── supabase/         # Supabase client configs
-├── scripts/
-│   ├── setup-db.sql      # Database schema
-│   └── fix-storage-policies.sql
-├── middleware.ts         # Auth middleware
-└── README.md
+│   ├── admin/
+│   │   └── charts/       # Dashboard charts
+│   ├── landing/          # Landing sections
+│   └── ui/               # ShadCN + custom components
+├── hooks/                # Custom React hooks
+├── services/             # Business logic layer
+├── types/                # TypeScript definitions
+└── showcase_assets/      # Screenshots
+```
 
+---
 
 ## 🎨 Theme System
 
-The application includes a dual theme system:
+| Light Theme | Dark Theme |
+|-------------|------------|
+| Professional blue | Warm orange/red |
+| Clean white background | Rich dark background |
+| Perfect for business | Comfortable viewing |
 
-### Light Theme (Blue/White)
-- Professional blue color scheme
-- Clean white background
-- Perfect for business presentations
+**Toggle**: Click the sun/moon icon in the navbar
 
-### Dark Theme (Orange/Red)
-- Warm orange/red accents
-- Rich dark background
-- Comfortable for extended viewing
+---
 
-**Toggle**: Click the sun/moon icon in the navbar  
-**Persistence**: Theme choice saved in localStorage
+## 📊 Admin Dashboard Features
+
+### Analytics
+- **Engagement Chart** – 30-day rolling area chart
+- **City Distribution** – Top 5 cities donut chart
+- **Trend Card** – Week-over-week growth with indicators
+- **Conversion Metric** – Contact → Subscriber funnel
+
+### CRUD Operations
+- ✅ Create, Read, Update, Delete for Projects
+- ✅ Create, Read, Update, Delete for Clients
+- ✅ Read-only for Contacts and Subscribers
+- ✅ Image upload with cropping
+
+---
 
 ## 🔐 Authentication
 
-### Admin Login
-- **URL**: http://localhost:3000/auth/login
-- **Default**: admin@gmail.com / admin@123
+| Route | Access |
+|-------|--------|
+| `/` | Public |
+| `/admin/*` | Protected (requires login) |
+| `/auth/login` | Login page |
 
-### Protected Routes
-All `/admin/*` routes require authentication. Unauthenticated users are redirected to login.
+**Default Admin**: `admin@gmail.com` / `admin@123`
 
-## 📊 Database Schema
+---
 
-### Tables
+## 📚 Documentation
 
-**projects**
-- id (UUID, PK)
-- name (TEXT)
-- description (TEXT)
-- image_url (TEXT)
-- created_at, updated_at (TIMESTAMP)
+- **[SETUP_DATABASE.md](./SETUP_DATABASE.md)** – Complete database setup
+- **[DEPLOYMENT.md](./DEPLOYMENT.md)** – Deployment instructions
+- **[API_DOCUMENTATION.md](./API_DOCUMENTATION.md)** – API reference
 
-**clients**
-- id (UUID, PK)
-- name (TEXT)
-- designation (TEXT)
-- description (TEXT)
-- image_url (TEXT)
-- created_at, updated_at (TIMESTAMP)
-
-**contact_requests**
-- id (UUID, PK)
-- full_name (TEXT)
-- email (TEXT)
-- mobile (TEXT)
-- city (TEXT)
-- created_at (TIMESTAMP)
-
-**newsletter_subscribers**
-- id (UUID, PK)
-- email (TEXT, UNIQUE)
-- subscribed_at (TIMESTAMP)
-
-### Storage Buckets
-- **projects**: Public bucket for project and client images
+---
 
 ## 🧪 Available Scripts
 
-bash
+```bash
 npm run dev         # Start development server
 npm run build       # Build for production
 npm run start       # Start production server
 npm run lint        # Run ESLint
-npm run type-check  # Check TypeScript types
+```
 
-# Helper scripts
-./dev.sh            # Dev server with nvm
-./build.sh          # Build with nvm
-
+---
 
 ## 🚢 Deployment
 
-See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions.
-
-### Quick Deploy to Vercel
+### Vercel (Recommended)
 
 1. Push code to GitHub
 2. Import project in Vercel
-3. Add environment variables:
-   - `NEXT_PUBLIC_SUPABASE_URL`
-   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-   - `SUPABASE_SECRET_KEY`
+3. Add environment variables
 4. Deploy!
 
-## 📚 Documentation
-
-- **[SETUP_DATABASE.md](./SETUP_DATABASE.md)** - Complete database setup guide
-- **[DEPLOYMENT.md](./DEPLOYMENT.md)** - Deployment instructions
-- **[API_DOCUMENTATION.md](./API_DOCUMENTATION.md)** - API reference
-
-## 🔧 Configuration
-
-### TypeScript
-- Strict mode enabled
-- Path aliases configured (`@/*`)
-- No build errors ignored
-
-### ESLint
-- Next.js recommended rules
-- TypeScript support
-- Custom rules for code quality
-
-### Tailwind CSS
-- v4 with PostCSS plugin
-- Custom theme colors
-- Premium animations
+---
 
 ## 🎯 Features Checklist
 
 - [x] Landing page with 8 sections
-- [x] Admin panel with dashboard
-- [x] Full CRUD for projects
-- [x] Full CRUD for clients
-- [x] Contact form submissions
-- [x] Newsletter subscriptions
+- [x] Admin dashboard with analytics
+- [x] Full CRUD for projects/clients
+- [x] Contact form & newsletter
 - [x] Image upload with cropping
-- [x] Theme switching (light/dark)
+- [x] Dual theme system
 - [x] Authentication & authorization
-- [x] Server-side validation
-- [x] Responsive design
-- [x] Premium styling with animations
+- [x] Smooth animations & micro-interactions
 - [x] TypeScript throughout
 - [x] Zero vulnerabilities
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+---
 
 ## 📝 License
 
 This project is licensed under the MIT License.
 
-## 🆘 Troubleshooting
-
-### Common Issues
-
-**"Bucket not found" error**
-- Solution: Create `projects` storage bucket in Supabase Dashboard
-
-**"RLS policy" error on upload**
-- Solution: Run `scripts/fix-storage-policies.sql`
-
-**"useTheme must be used within ThemeProvider"**
-- Solution: Already fixed in latest version
-
-**Theme doesn't persist**
-- Solution: Check browser localStorage is enabled
-
-**Login doesn't work**
-- Solution: Create admin user in Supabase Authentication
-
-## 📞 Support
-
-For issues and questions:
-- Check [SETUP_DATABASE.md](./SETUP_DATABASE.md)
-- Review [API_DOCUMENTATION.md](./API_DOCUMENTATION.md)
-- Open an issue on GitHub
-
-## ⭐ Acknowledgments
-
-- Built with [Next.js](https://nextjs.org/)
-- Powered by [Supabase](https://supabase.com/)
-- UI components from [ShadCN](https://ui.shadcn.com/)
-- Analytics by [Vercel](https://vercel.com/analytics)
-
 ---
 
-**Made with ❤️ using modern web technologies**
+<div align="center">
+
+**Made with ❤️ using Next.js, Supabase, and modern web technologies**
+
+</div>
