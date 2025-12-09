@@ -127,7 +127,7 @@ View all inquiries with full details
 ### 1. Clone & Install
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Harshit16g/full-stack-web-app
 cd full-stack-web-app
 npm install
 ```
