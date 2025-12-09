@@ -1,0 +1,80 @@
+{
+  "node": {
+    "009b249acb1ab36d8cf757b0c8a00233170231ca46": {
+      "workers": {
+        "app/admin/clients/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/clients.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/app/actions/upload.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "logout",
+          "filename": "app/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/admin/clients/page": "action-browser"
+      },
+      "exportedName": "logout",
+      "filename": "app/actions/auth.ts"
+    },
+    "40d525155b780549d66c42b9d477146a4078ec053d": {
+      "workers": {
+        "app/admin/clients/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/clients.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/app/actions/upload.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "deleteClient",
+          "filename": "app/actions/clients.ts"
+        }
+      },
+      "layer": {
+        "app/admin/clients/page": "action-browser"
+      },
+      "exportedName": "deleteClient",
+      "filename": "app/actions/clients.ts"
+    },
+    "4052c87059e066494e84faf6723eda6b14737a25b3": {
+      "workers": {
+        "app/admin/clients/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/clients.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/app/actions/upload.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "addClient",
+          "filename": "app/actions/clients.ts"
+        }
+      },
+      "layer": {
+        "app/admin/clients/page": "action-browser"
+      },
+      "exportedName": "addClient",
+      "filename": "app/actions/clients.ts"
+    },
+    "606ca9d8dfb8f931ea945eeb5b96bade7a040545ac": {
+      "workers": {
+        "app/admin/clients/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/clients.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/app/actions/upload.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "updateClient",
+          "filename": "app/actions/clients.ts"
+        }
+      },
+      "layer": {
+        "app/admin/clients/page": "action-browser"
+      },
+      "exportedName": "updateClient",
+      "filename": "app/actions/clients.ts"
+    },
+    "402c4d8e46e1f290f55f97741abd819a648a1e902a": {
+      "workers": {
+        "app/admin/clients/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/clients.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/app/actions/upload.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "uploadImage",
+          "filename": "app/actions/upload.ts"
+        }
+      },
+      "layer": {
+        "app/admin/clients/page": "action-browser"
+      },
+      "exportedName": "uploadImage",
+      "filename": "app/actions/upload.ts"
+    }
+  },
+  "edge": {}
+}

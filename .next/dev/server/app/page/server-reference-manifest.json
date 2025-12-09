@@ -1,0 +1,35 @@
+{
+  "node": {
+    "40137e9e5c8bab681f5b96765f9e62db3c1f4daf9e": {
+      "workers": {
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/contact.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "subscribeNewsletter",
+          "filename": "app/actions/newsletter.ts"
+        }
+      },
+      "layer": {
+        "app/page": "action-browser"
+      },
+      "exportedName": "subscribeNewsletter",
+      "filename": "app/actions/newsletter.ts"
+    },
+    "405c566267b1fc8664c2057d4be983a3c953a47afe": {
+      "workers": {
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/contact.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "submitContact",
+          "filename": "app/actions/contact.ts"
+        }
+      },
+      "layer": {
+        "app/page": "action-browser"
+      },
+      "exportedName": "submitContact",
+      "filename": "app/actions/contact.ts"
+    }
+  },
+  "edge": {}
+}
