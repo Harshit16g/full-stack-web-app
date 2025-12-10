@@ -1,74 +1,16 @@
 {
   "node": {
-    "40137e9e5c8bab681f5b96765f9e62db3c1f4daf9e": {
-      "workers": {
-        "app/page": {
-          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/contact.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "subscribeNewsletter",
-          "filename": "app/actions/newsletter.ts"
-        }
-      },
-      "layer": {
-        "app/page": "action-browser"
-      },
-      "filename": "app/actions/newsletter.ts",
-      "exportedName": "subscribeNewsletter"
-    },
-    "405c566267b1fc8664c2057d4be983a3c953a47afe": {
-      "workers": {
-        "app/page": {
-          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/newsletter.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/contact.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "submitContact",
-          "filename": "app/actions/contact.ts"
-        }
-      },
-      "layer": {
-        "app/page": "action-browser"
-      },
-      "filename": "app/actions/contact.ts",
-      "exportedName": "submitContact"
-    },
     "009b249acb1ab36d8cf757b0c8a00233170231ca46": {
       "workers": {
-        "app/admin/clients/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/clients.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/app/actions/upload.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "logout",
-          "filename": "app/actions/auth.ts"
-        },
-        "app/admin/contacts/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/contacts/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "logout",
-          "filename": "app/actions/auth.ts"
-        },
         "app/admin/page": {
           "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/dashboard.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
           "exportedName": "logout",
           "filename": "app/actions/auth.ts"
-        },
-        "app/admin/projects/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/projects/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/app/actions/upload.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "logout",
-          "filename": "app/actions/auth.ts"
-        },
-        "app/admin/subscribers/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/subscribers/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "logout",
-          "filename": "app/actions/auth.ts"
         }
       },
       "layer": {
-        "app/admin/clients/page": "action-browser",
-        "app/admin/contacts/page": "action-browser",
-        "app/admin/page": "action-browser",
-        "app/admin/projects/page": "action-browser",
-        "app/admin/subscribers/page": "action-browser"
+        "app/admin/page": "action-browser"
       },
       "filename": "app/actions/auth.ts",
       "exportedName": "logout"
@@ -87,118 +29,6 @@
       },
       "filename": "app/actions/dashboard.ts",
       "exportedName": "getDashboardStats"
-    },
-    "400ffdca3ea90c8e2329467097d2c9214491ade618": {
-      "workers": {
-        "app/admin/projects/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/projects/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/app/actions/upload.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "deleteProject",
-          "filename": "app/actions/projects.ts"
-        }
-      },
-      "layer": {
-        "app/admin/projects/page": "action-browser"
-      },
-      "filename": "app/actions/projects.ts",
-      "exportedName": "deleteProject"
-    },
-    "40a494b1897ba404082916b601facf1838e6776744": {
-      "workers": {
-        "app/admin/projects/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/projects/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/app/actions/upload.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "addProject",
-          "filename": "app/actions/projects.ts"
-        }
-      },
-      "layer": {
-        "app/admin/projects/page": "action-browser"
-      },
-      "filename": "app/actions/projects.ts",
-      "exportedName": "addProject"
-    },
-    "6005a3252c854e00b7605f9e8f699594648a490e36": {
-      "workers": {
-        "app/admin/projects/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/projects/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/app/actions/upload.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "updateProject",
-          "filename": "app/actions/projects.ts"
-        }
-      },
-      "layer": {
-        "app/admin/projects/page": "action-browser"
-      },
-      "filename": "app/actions/projects.ts",
-      "exportedName": "updateProject"
-    },
-    "402c4d8e46e1f290f55f97741abd819a648a1e902a": {
-      "workers": {
-        "app/admin/clients/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/clients.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/app/actions/upload.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "uploadImage",
-          "filename": "app/actions/upload.ts"
-        },
-        "app/admin/projects/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/projects/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/projects.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/app/actions/upload.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "uploadImage",
-          "filename": "app/actions/upload.ts"
-        }
-      },
-      "layer": {
-        "app/admin/clients/page": "action-browser",
-        "app/admin/projects/page": "action-browser"
-      },
-      "filename": "app/actions/upload.ts",
-      "exportedName": "uploadImage"
-    },
-    "40d525155b780549d66c42b9d477146a4078ec053d": {
-      "workers": {
-        "app/admin/clients/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/clients.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/app/actions/upload.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "deleteClient",
-          "filename": "app/actions/clients.ts"
-        }
-      },
-      "layer": {
-        "app/admin/clients/page": "action-browser"
-      },
-      "filename": "app/actions/clients.ts",
-      "exportedName": "deleteClient"
-    },
-    "4052c87059e066494e84faf6723eda6b14737a25b3": {
-      "workers": {
-        "app/admin/clients/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/clients.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/app/actions/upload.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "addClient",
-          "filename": "app/actions/clients.ts"
-        }
-      },
-      "layer": {
-        "app/admin/clients/page": "action-browser"
-      },
-      "filename": "app/actions/clients.ts",
-      "exportedName": "addClient"
-    },
-    "606ca9d8dfb8f931ea945eeb5b96bade7a040545ac": {
-      "workers": {
-        "app/admin/clients/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/clients/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/clients.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/app/actions/upload.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "updateClient",
-          "filename": "app/actions/clients.ts"
-        }
-      },
-      "layer": {
-        "app/admin/clients/page": "action-browser"
-      },
-      "filename": "app/actions/clients.ts",
-      "exportedName": "updateClient"
     }
   },
   "edge": {},
