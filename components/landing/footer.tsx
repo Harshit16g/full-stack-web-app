@@ -31,7 +31,7 @@ export function Footer() {
             <p className="mt-2 text-sm text-muted-foreground">
               Email: lodhi.ji.16@gmail.com
               <br />
-              Phone: +91 8770963987
+              Phone: +91 8770XXXX87
             </p>
           </div>
         </div>
