@@ -10,7 +10,7 @@
 
 **A modern, production-ready full-stack web application with a beautiful landing page, comprehensive admin dashboard, and real-time analytics.**
 
-[Live Demo](#) • [Documentation](#-documentation) • [Setup Guide](#-quick-start)
+[Live Demo](https://full-stack-web-app-eight.vercel.app/) • [Documentation](#-documentation) • [Setup Guide](#-quick-start)
 
 </div>
 
